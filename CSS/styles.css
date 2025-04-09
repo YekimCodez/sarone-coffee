@@ -106,6 +106,7 @@ body {
 
 .wrapper > h1 {
     color: var(--golden-tan);
+    font-family: var(--font-heading);
 }
 
 nav {
@@ -194,7 +195,7 @@ ul > li > a:hover::after {
 .hero > .wrapper .btn {
     background-color: var(--light-beige); /* Green */
     border: none;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     color: var(--dark-mocha);
     padding: 0.7rem 2.5rem;
     text-align: center;
@@ -219,14 +220,14 @@ ul > li > a:hover::after {
     justify-content: flex-start;
     flex-direction: column;
     align-items: flex-start;
-    padding: 1rem 0 0 0;
+    padding: 1rem 2.5rem 0 0;
     width: 80%;
 }
 
 .why-choose-us > .wrapper .btn {
     background-color: var(--dark-mocha); /* Green */
     border: none;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     color: var(--light-beige);
     padding: 0.7rem 2.5rem;
     text-align: center;
@@ -255,4 +256,43 @@ ul > li > a:hover::after {
     border-bottom-right-radius: 0.5rem;
     width: 50%;
     height: 50vh;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu h2 {
+    margin-bottom: 2rem;
+    font-family: var(--font-secondary);
+    color: var(--dark-mocha);
+}
+
+.coffee-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    gap: 1rem;
+}
+
+.coffee-item {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    width: 250px;
+    height: 350px;
+}
+
+.coffee-item > img {
+    width: 100%;
+    height: 60%; /* Adjust as needed */
+    object-fit: cover;
+    flex-shrink: 0;
+    display: block;
 }
