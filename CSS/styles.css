@@ -26,7 +26,8 @@
     --fw-black: 900;
 
     /* Base Font Size */
-    --fs-base: 1rem; /* 16px */
+    --fs-base: 0.5rem;
+    --fs-base-cards: 1rem; /* 16px */
     --fs-base-1: 1.2rem; 
     --fs-base-2: 1.5rem; 
 
@@ -51,6 +52,7 @@
     --fs-caption: 0.75rem; /* 12px */
 }
 
+/* ===== CSS resets to remove all default margin and padding ====== */
 *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -64,9 +66,9 @@ body {
 .top-bar {
     background-color: var(--primary-brown);
     padding: 0.5rem 0;
-
 }
 
+/* ======== Wrapper styles give the wrapper class a width of 80% ======== */
 .wrapper {
     max-width: 80%;
     margin: 0 auto;
@@ -109,6 +111,7 @@ body {
     font-family: var(--font-heading);
 }
 
+/* ======== Navigation styles ======== */
 nav {
     padding: 1rem 0;
     background-color: var(--light-beige);
@@ -148,6 +151,7 @@ ul > li > a:hover::after {
     width: 100%;
 }
 
+/* ======== Hero section styles ======== */
 .hero {
     background: url(/images/guy-basabose-FzdEbrA3Qj0-unsplash.jpg) no-repeat center center/cover;
     height: 100vh;
@@ -165,8 +169,8 @@ ul > li > a:hover::after {
     right: 0;
     left: 0;
     height: 100vh;
-    background-color: var(--tint); /* Black tint, adjust opacity here */
-    z-index: 1
+    background-color: var(--tint); 
+    z-index: 1;
 }
 
 .hero > .wrapper {
@@ -193,7 +197,7 @@ ul > li > a:hover::after {
 } 
 
 .hero > .wrapper .btn {
-    background-color: var(--light-beige); /* Green */
+    background-color: var(--light-beige); 
     border: none;
     border-radius: 0.5rem;
     color: var(--dark-mocha);
@@ -207,6 +211,7 @@ ul > li > a:hover::after {
     margin: 1.5rem 0;
 }
 
+/* ======== Why choose us section ======== */
 .why-choose-us {
     display: flex;
     flex-direction: row;
@@ -225,7 +230,7 @@ ul > li > a:hover::after {
 }
 
 .why-choose-us > .wrapper .btn {
-    background-color: var(--dark-mocha); /* Green */
+    background-color: var(--dark-mocha); 
     border: none;
     border-radius: 0.5rem;
     color: var(--light-beige);
@@ -271,6 +276,7 @@ ul > li > a:hover::after {
     color: var(--dark-mocha);
 }
 
+/* ====== Featured coffee section ======== */
 .coffee-grid {
     display: flex;
     justify-content: center;
@@ -280,6 +286,7 @@ ul > li > a:hover::after {
     gap: 1rem;
 }
 
+/* Individual coffee cards */
 .coffee-item {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
@@ -289,12 +296,55 @@ ul > li > a:hover::after {
     height: 350px;
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
+    transition: 0.3s ease-in-out;
+}
+
+.coffee-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3)
 }
 
 .coffee-item > img {
     width: 100%;
-    height: 60%; /* Adjust as needed */
+    height: 60%; 
     object-fit: cover;
     flex-shrink: 0;
     display: block;
 }
+
+.coffee-item > h3 {
+    font-family: var(--font-secondary);
+    color: var(--dark-mocha);
+}
+.coffee-item > p {
+    font-family: var(--font-secondary);
+    color: var(--dark-mocha);
+    font-size: var(--fs-base-cards);
+}
+
+.coffee-item > .btn {
+    background-color: var(--dark-mocha); 
+    border: none;
+    border-radius: 1rem;
+    color: var(--light-beige);
+    padding: 0.3rem 1.5rem;
+    margin-top: 0.6rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: var(--fs-base-cards);
+    font-family: var(--font-accent);
+    font-weight: var(--fw-semi-bold);
+}
+
+.coffee-item > .light-beige {
+    background-color: var(--golden-tan);
+    color: var(--dark-mocha);
+}
+
+.coffee-item > h3, p {
+    text-align: left;
+}
+
+
+/* I need to make the cards more responsive. I have to place the h3 and p elements inside a div and style them separately in order to get the desired effects i.e adding padding and preventing the buttons from popping out at the bottom of the cards. */
