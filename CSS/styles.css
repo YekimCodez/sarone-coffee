@@ -287,6 +287,8 @@ ul > li > a:hover::after {
     text-align: center;
     width: 250px;
     height: 350px;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
 }
 
 .coffee-item > img {
