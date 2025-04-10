@@ -199,9 +199,9 @@ ul > li > a:hover::after {
 .hero > .wrapper .btn {
     background-color: var(--light-beige); 
     border: none;
-    border-radius: 0.5rem;
+    border-radius: 1.5rem;
     color: var(--dark-mocha);
-    padding: 0.7rem 2.5rem;
+    padding: 0.5rem 2rem;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -232,9 +232,9 @@ ul > li > a:hover::after {
 .why-choose-us > .wrapper .btn {
     background-color: var(--dark-mocha); 
     border: none;
-    border-radius: 0.5rem;
+    border-radius: 1.5rem;
     color: var(--light-beige);
-    padding: 0.7rem 2.5rem;
+    padding: 0.5rem 2rem;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -343,6 +343,10 @@ ul > li > a:hover::after {
     font-size: var(--fs-base-cards);
     font-family: var(--font-accent);
     font-weight: var(--fw-semi-bold);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
 
 .coffee-content h3, p {
