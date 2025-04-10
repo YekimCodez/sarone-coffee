@@ -312,17 +312,25 @@ ul > li > a:hover::after {
     display: block;
 }
 
-.coffee-item > h3 {
-    font-family: var(--font-secondary);
+.coffee-item > .light-beige {
+    background-color: var(--golden-tan);
     color: var(--dark-mocha);
-}
-.coffee-item > p {
-    font-family: var(--font-secondary);
-    color: var(--dark-mocha);
-    font-size: var(--fs-base-cards);
 }
 
-.coffee-item > .btn {
+.coffee-item:last-child > .coffee-content > .btn {
+    background-color: var(--golden-tan);
+    color: var(--dark-mocha);
+}
+
+.coffee-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
+    padding: 1rem;
+}
+
+.coffee-content > .btn {
     background-color: var(--dark-mocha); 
     border: none;
     border-radius: 1rem;
@@ -337,14 +345,13 @@ ul > li > a:hover::after {
     font-weight: var(--fw-semi-bold);
 }
 
-.coffee-item > .light-beige {
-    background-color: var(--golden-tan);
+.coffee-content h3, p {
+    text-align: left;
     color: var(--dark-mocha);
+    font-family: var(--font-accent);
 }
 
-.coffee-item > h3, p {
-    text-align: left;
-}
+
 
 
 /* I need to make the cards more responsive. I have to place the h3 and p elements inside a div and style them separately in order to get the desired effects i.e adding padding and preventing the buttons from popping out at the bottom of the cards. */
