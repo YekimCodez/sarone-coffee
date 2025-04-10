@@ -1,6 +1,7 @@
 :root {
     /* Colors */
     --primary-brown: rgb(92, 64, 51);
+    --light-brown: rgb(219, 144, 106);
     --light-beige: rgb(234, 215, 197);
     --golden-tan: rgb(209, 146, 82);
     --dark-mocha: rgb(58, 38, 24);
@@ -289,11 +290,11 @@ ul > li > a:hover::after {
 /* Individual coffee cards */
 .coffee-item {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 100%;
     max-width: 300px;
+    height: 70vh; 
     margin: auto;
     text-align: center;
-    width: 250px;
-    height: 350px;
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
     transition: 0.3s ease-in-out;
@@ -335,7 +336,7 @@ ul > li > a:hover::after {
     border: none;
     border-radius: 1rem;
     color: var(--light-beige);
-    padding: 0.3rem 1.5rem;
+    padding: 0.3rem 1rem;
     margin-top: 0.6rem;
     text-align: center;
     text-decoration: none;
@@ -343,19 +344,42 @@ ul > li > a:hover::after {
     font-size: var(--fs-base-cards);
     font-family: var(--font-accent);
     font-weight: var(--fw-semi-bold);
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
+    white-space: nowrap;
     gap: 1rem;
 }
 
-.coffee-content h3, p {
-    text-align: left;
-    color: var(--dark-mocha);
+.happy-hours {
+    background-color: var(--light-brown);
+    color: var(--creamy-white);
     font-family: var(--font-accent);
+    display: flex;
+    width: 100%;
+    margin-top: 2rem;
 }
 
+.happy-hours > .happy-hours-conent {
+    color: var(--creamy-white);
+}
 
+.happy-hours > .wrapper {
+    display: flex;
+}
+
+.happy-hours > .wrapper > img {
+    display: inline-block;
+    width: 350px;
+    height: 250px;
+
+}
+
+/* How to stop the button text from wrapping */
+
+/* How to stop the buttons from growing taller? */
+
+/*Need to fix the height so that its responsive to accomodate smaller screens to avoid content spillage*/
 
 
 /* I need to make the cards more responsive. I have to place the h3 and p elements inside a div and style them separately in order to get the desired effects i.e adding padding and preventing the buttons from popping out at the bottom of the cards. */
