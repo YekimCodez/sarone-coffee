@@ -154,7 +154,7 @@ ul > li > a:hover::after {
 
 /* ======== Hero section styles ======== */
 .hero {
-    background: url(/images/guy-basabose-FzdEbrA3Qj0-unsplash.jpg) no-repeat center center/cover;
+    background: url(/images/M_Junior_3d_render_of_three_coffee_cups_on_coffee_beans_816177c3-bb80-40f0-8080-698d92f7da57.png) no-repeat center center/cover;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -186,7 +186,7 @@ ul > li > a:hover::after {
 }
 
 .hero > .wrapper h2 {
-    font-family: var(--font-body);
+    font-family: var(--font-accent);
     font-weight: var(--fw-extra-bold);
     font-size: var(--fs-h1);
     color: var(--creamy-white);
