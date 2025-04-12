@@ -162,6 +162,7 @@ ul > li > a:hover::after {
     position: relative;
 }
 
+/* =====Note: this block of CSS is putting a dark shade over the .hero section to darken the image so that the text is more visible. background-blend-mode: overlay; can also be used here!! */
 .hero::after {
     content: "";
     position: absolute;
@@ -183,6 +184,7 @@ ul > li > a:hover::after {
     height: 100%;
     position: relative;
     z-index: 2;
+    line-height: 2.5rem;
 }
 
 .hero > .wrapper h2 {
@@ -190,6 +192,8 @@ ul > li > a:hover::after {
     font-weight: var(--fw-extra-bold);
     font-size: var(--fs-h1);
     color: var(--creamy-white);
+    margin-bottom: 1rem;
+    line-height: 3rem;
 }
 
 .hero > .wrapper > h2 > .top {
@@ -197,19 +201,24 @@ ul > li > a:hover::after {
     font-size: var(--fs-h2);
 } 
 
+.hero > .wrapper > p {
+    white-space: wrap;
+    line-height: 2rem;
+}
+
 .hero > .wrapper .btn {
     background-color: var(--light-beige); 
     border: none;
     border-radius: 1.5rem;
     color: var(--dark-mocha);
-    padding: 0.5rem 2rem;
+    padding: 0.3rem 2rem;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: var(--fs-base-2);
     font-family: var(--font-accent);
     font-weight: var(--fw-semi-bold);
-    margin: 1.5rem 0;
+    margin: 1rem 0;
 }
 
 /* ======== Why choose us section ======== */
@@ -273,7 +282,7 @@ ul > li > a:hover::after {
 
 .menu h2 {
     margin-bottom: 2rem;
-    font-family: var(--font-secondary);
+    font-family: var(--font-accent);
     color: var(--dark-mocha);
 }
 
@@ -313,6 +322,12 @@ ul > li > a:hover::after {
     display: block;
 }
 
+.coffee-item h3, p {
+    font-family: var(--font-accent);
+    text-align: left;
+}
+
+/* This block of CSS adds the mentioned color schemes to the .btn class for the last card element */
 .coffee-item > .light-beige {
     background-color: var(--golden-tan);
     color: var(--dark-mocha);
